@@ -1,0 +1,506 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+
+    background: linear-gradient(90deg,
+            #ff0000,
+            #ffffff,
+            #ff0000
+    );
+
+    filter: brightness(2);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+}
+
+.logo:hover {
+    background: linear-gradient(90deg,
+        #ff4d4d,
+        #ffffff,
+        #ff4d4d
+    );
+
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.container {
+    background-image: url(Gemini_Generated_Image_adnu3radnu3radnu.png);
+    width: 100%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.sub-container {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5%;
+
+}
+
+.search-box {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.search-box input {
+    width: 70%;
+    height: 40%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 2%;
+
+}
+
+.search-box button {
+    width: 7%;
+    height: 40%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(10, 196, 221);
+    font-size: 1.5rem;
+}
+
+
+.search-box button i {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.separation {
+    width: 80%;
+    height: 2%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+.trending {
+    width: 80%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+
+.trend {
+    height: 90%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.search-nature {
+    width: 15%;
+}
+
+.search-abstract {
+    width: 15%;
+}
+
+.search-cats {
+    width: 15%;
+}
+
+
+
+.trending-searches {
+    width: 20%;
+    height: 90%;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.search-result {
+    width: 95%;
+    margin: auto;
+    column-count: 3;
+    display: block;
+    gap: 10px;
+}
+
+.wrapper_class {
+    position: relative;
+}
+
+.wrapper_class img {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    break-inside: avoid;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.wrapper_class .Button_class {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+.download-btn,
+.visit-btn {
+    text-align: center;
+    width: 25%;
+    border-radius: 5px;
+    align-items: center;
+    outline: none;
+    min-height: 30px;
+    max-height: 40px;
+    border: none;
+
+}
+
+.download-btn span,
+.visit-btn span {
+    margin: 2px;
+}
+
+.download-btn {
+    margin: 6px 5px 0px 0px;
+    background-color: red;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    z-index: 10;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    font-weight: bolder;
+    font-size: 1rem;
+
+}
+
+.visit-btn {
+    margin: 0px 0px 20px 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper_class:hover .download-btn,
+.wrapper_class:hover .visit-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper_class:hover {
+    filter: brightness(0.7);
+}
+
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-img {
+    position: relative;
+    top: 0px;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+
+.Show-more {
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    display: block;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin: 40px auto;
+    cursor: pointer;
+    max-width: 80%;
+}
+
+.Show-more span {
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid;
+    border-left-color: rgb(10, 196, 221);
+    border-right-color: rgb(10, 196, 221);
+    border-top-color: lightgrey;
+    border-bottom-color: lightgrey;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: load 1s linear 0s infinite;
+    display: none;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@media screen and (min-width:1400px) {
+    .search-result{
+        column-count: 5;
+    }
+    
+}
+
+@media screen and (min-width:1100px) {
+    .search-result{
+        column-count: 4;
+    }
+    
+}
+/*Media Queries*/
+
+@media (max-width:1025px) {
+    .download-btn {
+        width: 30%;
+    }
+}
+
+@media (max-width:820px) {
+    .download-btn {
+        width: 35%;
+    }
+
+    .visit-btn {
+        width: 30%;
+    }
+
+    .search-box input {
+        width: 80%;
+    }
+
+    .search-box button {
+        width: 12%;
+    }
+
+}
+
+@media (max-width:700px) {
+    .visit-btn {
+        width: 35%;
+    }
+
+    .download-btn {
+        font-size: 0.875rem;
+        width: 38%;
+    }
+}
+
+@media (max-width:650px) {
+    .trending {
+        width: 100%;
+    }
+
+    .search-result {
+        gap: 4px;
+        width: 98%;
+    }
+
+    .logo{
+        font-size: 2.7rem;
+    }
+
+}
+
+@media (max-width:500px) {
+    .sub-container {
+        width: 98%;
+    }
+
+    .separation {
+        width: 98%;
+    }
+
+    .trend {
+        width: 20%;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-result {
+        column-count: 2;
+    }
+
+    .download-btn {
+        font-size: 1rem;
+        min-height: 30px;
+    }
+
+    .visit-btn {
+        min-height: 30px;
+    }
+
+    .logo{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:450px) {
+
+    .trend {
+        width: 25%;
+    }
+}
+
+@media (max-width:380px) {
+    .visit-btn {
+        font-size: 0.875rem;
+        width: 40%;
+    }
+
+    .download-btn {
+        font-size: 0.875rem;
+        width: 40%;
+    }
+    .logo{
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width:290px) {
+    .trending-searches {
+        font-size: 14px;
+    }
+
+    .trend span {
+        font-size: 12px;
+    }
+
+    .search-box input {
+        height: 35%;
+    }
+
+    .search-box button {
+        height: 35%;
+
+    }
+
+    .search-box button i {
+        font-size: 1.3rem;
+    }
+
+    .download-btn {
+        font-size: 12px;
+    }
+
+    .visit-btn {
+        font-size: 12px;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+}
