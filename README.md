@@ -1,6 +1,5 @@
 # 🌟 Pixels– UnsplashAPI Powered Image Search App
 
-![PixelQuest Banner](https://user-images.githubusercontent.com/yourusername/pixelquest-banner.png)  
 
 **PixelQuest** is a sleek and user-friendly web app that lets you search and explore high-quality images using keywords. Powered by the Unsplash API, it brings trending photos and your favorite visuals directly to your screen. Perfect for content creators, designers, or anyone who loves stunning photography! 🖼️✨  
 
